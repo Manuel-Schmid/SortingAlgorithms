@@ -102,10 +102,7 @@ function initMergeSort() {
     for (let i = 0; i < nums.length; i++) {
         numsObj[i] = nums[i]
     }
-    // console.log(Object.size(numsObj))
     console.log(numsObj)
-    // console.log(getPartOfNumsObj(Object.keys(numsObj).filter(key => (key < nums.length/2)), numsObj))
-    // console.log(getPartOfNumsObj(Object.keys(numsObj).filter(key => (key >= nums.length/2)), numsObj))
     printNumsObjToChart(mergeSort(numsObj))
 }
 
@@ -129,7 +126,6 @@ function mergeSort(numsObj) {
     }
     console.log(Object.size(numsObj))
 
-    // const keys = Object.keys(numsObj)
     const left = getPartOfNumsObj(0, Object.size(numsObj)/2, numsObj)
     const right = getPartOfNumsObj(Object.size(numsObj)/2, Object.size(numsObj), numsObj)
     console.log(left, right)
