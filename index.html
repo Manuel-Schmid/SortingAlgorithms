@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
     <script src="algorithms.js"></script>
-    <title>Algorithms</title>
+    <title class="title">Algorithms</title>
 </head>
 <body>
 <h1 class="title">Algorithms</h1>
-<button onclick="newNums()">random numbers</button>
+<button class="button is-link is-light" onclick="newNums()">random numbers</button>
 <div class="sort-btn-group">
-    <button onclick="bubbleSort()">Bubble Sort</button>
-    <button onclick="selectionSort()">Selection Sort</button>
-    <button onclick="insertionSort()">Insertion Sort</button>
+    <button class="button is-primary is-light" onclick="bubbleSort()">Bubble Sort</button>
+    <button class="button is-success is-light" onclick="selectionSort()">Selection Sort</button>
+    <button class="button is-warning is-light" onclick="insertionSort()">Insertion Sort</button>
+    <button class="button is-danger is-light" onclick="initMergeSort()">Merge Sort</button>
 </div>
 <div class="barchart">
     <div class="bars">
@@ -50,5 +52,10 @@
         <div class="bar"> </div>
     </div>
 </div>
+<footer>
+    <div class="foot">
+        <p>&copy; Manuel Schmid 2021</p>
+    </div>
+</footer>
 </body>
 </html>
