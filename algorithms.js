@@ -106,32 +106,34 @@ function initMergeSort() {
     printNumsObjToChart(mergeSort(numsObj))
 }
 
-function getPartOfNumsObj(start, stop, numsObj) {
-    let newNumsObj = {}
-
-    index = start
-    for(var prop in numsObj) {
-        if (index >= stop) break
-        else {
-            newNumsObj[prop] = numsObj[index]
-            index++
-        }
-    }
-    return newNumsObj
-}
-
 function mergeSort(numsObj) {
     if (Object.size(numsObj) <= 1) {
         return numsObj
     }
-    console.log(Object.size(numsObj))
 
     const left = getPartOfNumsObj(0, Object.size(numsObj)/2, numsObj)
     const right = getPartOfNumsObj(Object.size(numsObj)/2, Object.size(numsObj), numsObj)
-    console.log(left, right)
 
     const res = merge(mergeSort(left), mergeSort(right));
+    printNumsObjToChart(res)
     return res
+}
+
+function getPartOfNumsObj(start, stop, numsObj) {
+    let newNumsObj = {}
+    for (let i = start; i < stop; i++) {
+        let prop = getProb(i, numsObj);
+        newNumsObj[i] = numsObj[prop]
+    }
+    return newNumsObj
+}
+
+function getProb(searched, numsObj) {
+    let index = 0
+    for (var prop in numsObj) {
+        if (index === searched) return prop
+        else index++
+    }
 }
 
 function merge(leftObj, rightObj) {
