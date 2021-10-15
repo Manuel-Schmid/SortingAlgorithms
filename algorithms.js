@@ -102,7 +102,6 @@ function initMergeSort() {
     for (let i = 0; i < nums.length; i++) {
         numsObj[i] = nums[i]
     }
-    console.log(numsObj)
     printNumsObjToChart(mergeSort(numsObj))
 }
 
